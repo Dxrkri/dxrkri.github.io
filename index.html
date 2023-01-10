@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Memory Game</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <h1>Memory Game</h1>
-    <p id="message"></p>
-    <div id="game"></div>
-    <button onclick="newGame()">New Game</button>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <style>
+    #circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: red;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="circle"></div>
+  <script>
+    // you can use a js querySelector to change the size or color of the circle 
+    // document.querySelector('#circle').style.backgroundColor = 'blue';
+  </script>
+</body>
 </html>
